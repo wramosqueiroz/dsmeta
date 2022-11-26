@@ -6,10 +6,10 @@ function Header() {
     <header>
       <div className="dsmeta-logo-container">
         <img src={logo} alt="DSMeta" />
-        <h1>DSMeta</h1>
+        <h1>Programa de Controle de Vendas</h1>
         <p>
-          Desenvolvido por
-          <a href="https://github.com/wramosqueiroz/dsmeta"> @wramosqueiroz</a>
+          Desenvolvido por:
+          <a href="https://github.com/wramosqueiroz/dsmeta"> Wanderson Ramos Queiroz</a>
         </p>
       </div>
     </header>
