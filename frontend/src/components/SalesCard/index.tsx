@@ -9,7 +9,7 @@ import './styles.css';
 
 function SalesCard() {
   //função que define a data com 30 dias de diferença
-  const min_date = new Date(new Date().setDate(new Date().getDate() - 30));
+  const min_date = new Date(new Date().setDate(new Date().getDate() - 365));
   const max_date = new Date();
 
   const [minDate, setMinDate] = useState(min_date);
@@ -18,7 +18,6 @@ function SalesCard() {
   const [sales, setSales] = useState<Sale[]>([]);
 
   useEffect(() => {
-
     const dmin = minDate.toISOString().slice(0, 10);
     const dmax = maxDate.toISOString().slice(0, 10);
 
@@ -75,7 +74,7 @@ function SalesCard() {
                     <td>R$ {sale.amount.toFixed(2)}</td>
                     <td>
                       <div className="dsmeta-red-btn-container">
-                        <NotificationButton />
+                        <NotificationButton saleId={sale.id} />
                       </div>
                     </td>
                   </tr>
